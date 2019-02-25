@@ -56,6 +56,22 @@ namespace _707193
 
         }
 
+        void SearchForAstrilde(Village root)
+        {
+            try
+            {
+                if (root.isAstrildgeHere) { Console.WriteLine("Found Astrilde in: {0}", root.VillageName); return; }
+            }
+            catch (NullReferenceException nre) { Console.WriteLine("encountered Null Object "); }
+
+            if (root == null)
+            {
+                return;
+            }
+            SearchForAstrilde(root.east);
+            SearchForAstrilde(root.west);
+        }
+
         class CountrySide
         {
             // Create the LinkedList to reflect the Map in the PowerPoint Instructions

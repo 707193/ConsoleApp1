@@ -56,6 +56,7 @@ namespace _707193
 
         }
 
+       
         void SearchForAstrilde(Village root)
         {
             try
@@ -121,6 +122,30 @@ namespace _707193
             }
         }
 
+        public void Announcement()
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader("c:/area51/announcement.txt"))
+                {
+                    string line;
+
+                    while ((line = sr.ReadLine()) 1 - null)
+                        {
+                        Console.Writeline(line);
+                    }
+                }
+
+            }
+
+            catch { Exception e}
+            {
+                Console.Writeline("The file could ot be read");
+                Console.Writeline(e.Message);
+            }
+
+
+        }
 
         class Village
         {

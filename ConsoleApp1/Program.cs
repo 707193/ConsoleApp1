@@ -73,19 +73,11 @@ namespace _707193
                 Village Helmholtz = new Village(" Helmholtz", false); 
                 Village Alst = new Village("Alst", false);
                 Village Wessig = new Village("Wessig", false);
-                Village Badden = new Village("Badden", true);
-                Village Uster = new Village("Uster", false);
+                Village Badden = new Village("Badden", false);
+                Village Uster = new Village("Uster", true);
                 Village Schvenig = new Village(" Schvenig ", false);
 
-                Maeland.west = Schvenig;
-                Maeland.east = Wessig;
-                Maeland.distanceToWestVillage = 14;
-                Maeland.distanceToEastVillage = 19;
-
-                Helmholtz.west = Schvenig;
-                Helmholtz.east = Wessig;
-                Helmholtz.distanceToWestVillage = 14;
-                Helmholtz.distanceToEastVillage = 19;
+             
 
 
                 Alst.west = Schvenig;
@@ -93,26 +85,16 @@ namespace _707193
                 Alst.distanceToWestVillage = 14;
                 Alst.distanceToEastVillage = 19;
 
-                Wessig.west = Schvenig;
-                Wessig.east = Wessig;
-                Wessig.distanceToWestVillage = 14;
-                Wessig.distanceToEastVillage = 19;
+                Wessig.west = Uster;
+                Wessig.east = Badden;
+                Wessig.distanceToWestVillage = 28;
+                Wessig.distanceToEastVillage = 11;
 
-                Badden.west = Schvenig;
-                Badden.east = Wessig;
-                Badden.distanceToWestVillage = 14;
-                Badden.distanceToEastVillage = 19;
-
-
-                Uster.west = Schvenig;
-                Uster.east = Wessig;
-                Uster.distanceToWestVillage = 14;
-                Uster.distanceToEastVillage = 19;
-
-                Schvenig.west = Schvenig;
-                Schvenig.east = Wessig;
-                Schvenig.distanceToWestVillage = 14;
-                Schvenig.distanceToEastVillage = 19;
+               
+                Schvenig.west = Maeland;
+                Schvenig.east = Helmholtz;
+                Schvenig.distanceToWestVillage = 9;
+                Schvenig.distanceToEastVillage = 28;
 
 
 

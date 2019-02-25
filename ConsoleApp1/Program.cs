@@ -76,12 +76,45 @@ namespace _707193
                 Village Badden = new Village("Badden", true);
                 Village Uster = new Village("Uster", false);
                 Village Schvenig = new Village(" Schvenig ", false);
+
+                Maeland.west = Schvenig;
+                Maeland.east = Wessig;
+                Maeland.distanceToWestVillage = 14;
+                Maeland.distanceToEastVillage = 19;
+
+                Helmholtz.west = Schvenig;
+                Helmholtz.east = Wessig;
+                Helmholtz.distanceToWestVillage = 14;
+                Helmholtz.distanceToEastVillage = 19;
+
+
                 Alst.west = Schvenig;
                 Alst.east = Wessig;
                 Alst.distanceToWestVillage = 14;
                 Alst.distanceToEastVillage = 19;
 
-               
+                Wessig.west = Schvenig;
+                Wessig.east = Wessig;
+                Wessig.distanceToWestVillage = 14;
+                Wessig.distanceToEastVillage = 19;
+
+                Badden.west = Schvenig;
+                Badden.east = Wessig;
+                Badden.distanceToWestVillage = 14;
+                Badden.distanceToEastVillage = 19;
+
+
+                Uster.west = Schvenig;
+                Uster.east = Wessig;
+                Uster.distanceToWestVillage = 14;
+                Uster.distanceToEastVillage = 19;
+
+                Schvenig.west = Schvenig;
+                Schvenig.east = Wessig;
+                Schvenig.distanceToWestVillage = 14;
+                Schvenig.distanceToEastVillage = 19;
+
+
 
             }
             public void travelVillages()

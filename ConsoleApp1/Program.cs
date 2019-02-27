@@ -8,7 +8,7 @@ using System.IO;
 
 class Jhajj
 {
-    public JournalEntry(string note, int dist)
+    public Jhajj(string note, int dist)
     {
         villageName = note; distanceTraveled = dist;
         HowFarToGetBack = distanceTraveled;
@@ -24,10 +24,10 @@ class Jhajj
 
 class jyot
 {
-    private static JournalEntry je;
+    private static Jhajj je;
     public static bool FoundAstrilde = false;
 
-    public static List<JournalEntry> HugiJournal = new List<JournalEntry>();
+    public static List<Jhajj> HugiJournal = new List<Jhajj>();
 
     public static int CalculateDistanceWalked()
     {
@@ -65,10 +65,10 @@ class CountrySide
 
     public void TraverseVillages(Village CurrentVillage)
     {
-        if (Hugi.FoundAstrilde) return;
+        if (jyot.FoundAstrilde) return;
 
 
-        Hugi.HugiJournal.Add(new JournalEntry(CurrentVillage.VillageName, CurrentVillage.distanceFromPreviousVillage));
+        jyot.HugiJournal.Add(new Jhajj(CurrentVillage.VillageName, CurrentVillage.distanceFromPreviousVillage));
         try
         {
             Console.WriteLine("I am in {0}", CurrentVillage.VillageName);
@@ -77,8 +77,8 @@ class CountrySide
             {
                 Console.WriteLine("I found Dear Astrildge in {0}", CurrentVillage.VillageName);
                 Console.WriteLine("**** FEELING HAPPY!!! ******");
-                Console.WriteLine("Astrilde, I walked {0} vika to find you. Will you marry me?", Hugi.CalculateDistanceWalked());
-                Hugi.FoundAstrilde = true;
+                Console.WriteLine("Astrilde, I walked {0} vika to find you. Will you marry me?", jyot.CalculateDistanceWalked());
+                jyot.FoundAstrilde = true;
             }
 
             TraverseVillages(CurrentVillage.west);
@@ -111,16 +111,16 @@ class CountrySide
         this.Announcement();
     }
 
-  public void Announcement()
+    public void Announcement()
     {
         try
         {
-           
+
             using (StreamReader sr = new StreamReader("U:/Users/732135/annoucement.txt"))
             {
                 string line;
 
-                
+
                 while ((line = sr.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
@@ -129,8 +129,8 @@ class CountrySide
         }
         catch (Exception e)
         {
-           
-           Console.WriteLine("The file could not be read:");
+
+            Console.WriteLine("The file could not be read:");
             Console.WriteLine(e.Message);
         }
     }

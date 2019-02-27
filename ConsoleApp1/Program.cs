@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-class JournalEntry
+class Jhajj
 {
     public JournalEntry(string note, int dist)
     {
@@ -22,7 +22,7 @@ class JournalEntry
 
 
 
-class Hugi
+class jyot
 {
     private static JournalEntry je;
     public static bool FoundAstrilde = false;

@@ -116,7 +116,7 @@ class CountrySide
         try
         {
 
-            using (StreamReader sr = new StreamReader("U:/Users/732135/annoucement.txt"))
+            using (StreamReader sr = new StreamReader("U:/Users/707193/annoucement.txt"))
             {
                 string line;
 
